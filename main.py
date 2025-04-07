@@ -17,7 +17,7 @@ def chosen_option(z: str, x: str, y: str):
     if user_input_option in options_nums:
         return options_nums[user_input_option](user_input_one, user_input_two)# calls the z while giving the two values/parameters
     else:
-        print("error chosen option")
+        print("error chosen option...........")
 
 # This function is used for checking the option user selected
 def is_valid_option(s: str):
@@ -33,12 +33,7 @@ def is_valid_option(s: str):
 
 # This function is for checking the numbers inputted by user for calculation
 def is_valid_number(s: str):
-    user_num = 0 # store user number variable once verified is a number
-    if s.isnumeric():
-        user_num = int(s)
-        return True # returns vaild is True
-    else:
-        return False
+    return s.isnumeric()
 
 
 def addition(x: float, y: float):  # completed addition to test to see if others work
@@ -68,7 +63,6 @@ def power(x: str, y: str):
 # Menu and inital welcomes
 def cli_menu():
     running = True  # for later while loop
-    valid = False  # check vaildation return value
 
     # Welcome area
     print(" -+- Welcome to the Calculator -+- ")
